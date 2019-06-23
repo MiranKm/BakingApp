@@ -3,7 +3,9 @@ package com.example.miranpc.bakingapp3.ActivitiesAndFragments;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SnapHelper;
 import android.view.MenuItem;
 
 import com.example.miranpc.bakingapp3.Adapters.IngredientsAdapter;
@@ -20,7 +22,7 @@ public class RecipeListActivity extends AppCompatActivity {
 
     public static final String DATA = "data";
     private boolean twoPane;
-    RecyclerView ingredientsRecycler, stepsRecycler;
+    private RecyclerView ingredientsRecycler, stepsRecycler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +47,11 @@ public class RecipeListActivity extends AppCompatActivity {
 
         IngredientsAdapter ingredientsAdapter = new IngredientsAdapter(ingredients, this);
         setUpIngredientsRecycler(ingredientsAdapter);
-
+        SnapHelper snapHelper= new LinearSnapHelper();
         ArrayList<Steps> steps = (ArrayList<Steps>) recipe.getSteps();
         StepsAdapter adapter = new StepsAdapter(this, steps, twoPane);
         setUpStepsRecycler(adapter);
+        snapHelper.attachToRecyclerView(ingredientsRecycler);
 
         if (twoPane)
             adapter.ShowFragment(0);
