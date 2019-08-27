@@ -11,11 +11,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
+import com.example.miranpc.bakingapp3.Adapters.MainRecipeAdapter;
+import com.example.miranpc.bakingapp3.R;
 import com.example.miranpc.bakingapp3.Recipes;
 import com.example.miranpc.bakingapp3.SharedUtilis.ReceipeDataService;
 import com.example.miranpc.bakingapp3.SharedUtilis.RecipeData;
-import com.example.miranpc.bakingapp3.R;
-import com.example.miranpc.bakingapp3.Adapters.MainRecipeAdapter;
 import com.example.miranpc.bakingapp3.SharedUtilis.SharedPrefUtil;
 import com.google.gson.Gson;
 

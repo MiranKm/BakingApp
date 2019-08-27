@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Baking App 3</string>
+    <string name="app_name">Baking App</string>
     <string name="title_receipe_list">Receipes</string>
     <string name="title_receipe_detail">Receipe Detail</string>
     <string name="see_ingredients">See Ingredients</string>

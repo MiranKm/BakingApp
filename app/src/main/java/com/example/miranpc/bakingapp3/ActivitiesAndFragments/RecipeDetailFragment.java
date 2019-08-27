@@ -68,7 +68,6 @@ public class RecipeDetailFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         if (getArguments().containsKey(STEPS)) {
             steps = getArguments().getParcelableArrayList(STEPS);
             currentStepPosition = getArguments().getInt(POSITION);
